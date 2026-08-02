@@ -23,7 +23,7 @@ repository               : "madelineceli13.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/files/profile.png"
+  avatar           : "/images/profile.png"
   name             : "Madeline"
   bio              : "CS PhD student"
   email            : "mckitch@andrew.cmu.edu"
