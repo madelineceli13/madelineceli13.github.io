@@ -11,4 +11,4 @@ author_profile: true
 - music - piano, organ, and classical composition
 - trail running, yoga
 
-<img src="yoga.png" alt="Yoga at lake superior :)" width="400">
+<img src="/files/yoga.png" alt="Yoga at lake superior :)" width="400">

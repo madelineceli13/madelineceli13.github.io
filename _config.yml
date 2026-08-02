@@ -23,7 +23,7 @@ repository               : "mckitch.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "/files/profile.png"
   name             : "Madeline"
   bio              : "CS PhD student"
   email            : "mckitch@andrew.cmu.edu"

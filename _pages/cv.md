@@ -5,4 +5,4 @@ permalink: /cv/
 author_profile: true
 ---
 
-My full CV is available [here](/files/cv.pdf).
+You can see my CV [here](/files/cv.pdf).

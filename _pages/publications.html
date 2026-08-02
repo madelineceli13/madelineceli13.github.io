@@ -1,36 +1,31 @@
 ---
 layout: archive
-title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+  .pub-list { list-style: none; padding-left: 0; margin-top: 0.5em; }
+  .pub-list li { margin-bottom: 1.3em; line-height: 1.45; }
+  .pub-list .pub-title { font-weight: 700; }
+  .pub-list .pub-title a { color: #2a2a2a; }
+  .pub-list .pub-title a:hover { text-decoration: underline; }
+  .pub-list .pub-meta { color: #666; }
+</style>
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
+{% for category in site.publication_category %}
+  {% assign category_key = category[0] %}
+  {% assign category_title = category[1].title %}
+  <h2>{{ category_title }}</h2>
+  <ul class="pub-list">
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    {% if post.category == category_key %}
+      <li>
+        <div class="pub-title">{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</div>
+        {% if post.excerpt %}<div class="pub-authors">{{ post.excerpt }}</div>{% endif %}
+        {% if post.venue %}<div class="pub-meta">{{ post.venue }}</div>{% endif %}
+      </li>
+    {% endif %}
   {% endfor %}
-{% endif %}
-
-
-
+  </ul>
+{% endfor %}
